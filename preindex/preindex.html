@@ -22,7 +22,7 @@
     </div>
     <!-- FIN DEL PRELOADER -->
     <main>
-        <div class="container"> 
+        <div class="container" id="container-main"> 
             <div class="d-flex flex-column">
                 <h2 class="texto text-center">This is a <br>FRAGANCES <br> Website</h2>
 
@@ -42,14 +42,25 @@
     crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
     <script src="/preindex/preindex.js"></script>
-
+    
     <script>
-        window.onload = function () {
-            let contenedor = document.getElementById("preload-container");
+        const preLoader = document.getElementById("preload-container");
+        const main = document.getElementById("container-main");
 
-            contenedor.style.visibility = 'hidden';
-            contenedor.style.opacity = 0;
+        async function loadData(){
+            preLoader.style.display = "block";
+            await sleep(2);
+            preLoader.style.display = "none";
+            main.style.display = "block";
         }
+
+        async function sleep(seconds){
+            return new Promise((resolve)=> setTimeout(resolve, seconds * 1000));
+        }
+
+        loadData();
+
+
     </script>
 </body>
 </html>
