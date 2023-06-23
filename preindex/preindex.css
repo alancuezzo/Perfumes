@@ -20,10 +20,26 @@ body{
 }
 
 
-.texto{
+.texto-p{
     font-size: 60px;
     margin: 0;
-    line-height: 60px;
+    line-height: 70px;
+}
+.texto-h2{
+    font-size: 100px;
+    margin: 0;
+    line-height: 130px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffff;
+    background: url(/assets/img/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0 ;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 
 .botonIngreso{
