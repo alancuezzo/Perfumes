@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="preload.css">
+</head>
+
+<body>
+    <div class="preload-container" id="preload-container">
+        <div class="preload" id="preload">
+            <img src="/assets/img/gif.gif" alt="" srcset="">
+            <h2>LOADING...</h2>
+        </div>
+    </div>
+
+
+
+    <script>
+        window.onload = function () {
+            let contenedor = document.getElementById("preload-container");
+
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = 0;
+        }
+    </script>
+</body>
+
+</html>
