@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="preload.css">
     <link rel="stylesheet" href="premain.css">
+   
     <title>Document</title>
 </head>
 <body>
-    <div class="menu-container">
+    <header>
+        <div class="preload-container" id="preload-container">
+            <div class="preload" id="preload">
+                <img src="/assets/img/gif.gif" alt="" srcset="">
+                <h2>LOADING...</h2>
+            </div>
+        </div>
+         <!-- FIN DEL PRELOADER -->
+    </header>
+    <main> <div class="menu-container">
         <div class="from-him">
             <div class="button-container">
-                <span class="mask">FROM HIM</span>
-            <a href="#">CLICK HERE</a></div>
+                <span class="mask">FOR HIM</span>
+            <a href="/Principal/index.html">CLICK HERE</a></div>
             </div>
 
         <div class="from-her">
             <div class="button-container">
-                <span class="mask">FROM HER</span>
+                <span class="mask">FOR HER</span>
             <a href="#">CLICK HERE</button></div>
             </div>
 
     </div>
+    <footer></footer>
+    <script>
+        const preLoader = document.getElementById("preload-container");
+        const main = document.getElementById("container-main");
+
+        async function loadData(){
+            preLoader.style.display = "block";
+            await sleep(2);
+            preLoader.style.display = "none";
+            main.style.display = "block";
+        }
+
+        async function sleep(seconds){
+            return new Promise((resolve)=> setTimeout(resolve, seconds * 1000));
+        }
+
+        loadData();
+
+
+    </script>
+</main>
+   
 </body>
 </html>
